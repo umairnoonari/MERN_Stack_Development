@@ -1,0 +1,11 @@
+const express=require("express")
+const mongoose=require("mongoose")
+const cors=require("cors")
+const app=express()
+mongoose.connect("mongodb://127.0.0.1/practice")
+app.use(express.json())
+app.use(cors())
+app.use("/auth",require("./routes/user"))
+app.listen(3001,function(){
+    console.log("Server is listening at 3001")
+})
