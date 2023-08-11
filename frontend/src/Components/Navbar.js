@@ -35,6 +35,16 @@ const Navbar = () => {
                   UserData
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className={`nav-link ${location.pathname==='/renderprops'?"active":""} ${styles.font}`} to="/renderprops">
+                  Render Props Function
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className={`nav-link ${location.pathname==='/wrappedcommponent'?"active":""} ${styles.font}`} to="/wrappedcommponent">
+                  Wrapped Commponent Function
+                </Link>
+              </li>
             </ul>
             </div>
             {
