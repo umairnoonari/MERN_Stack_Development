@@ -21,6 +21,7 @@ const Userdetails = () => {
       <ul>
         <DisplayUsers/>
       </ul>
+      <hr></hr>
       <DeleteAllUser/>
     </Wrapper>
   )
