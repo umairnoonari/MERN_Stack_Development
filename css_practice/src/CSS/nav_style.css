@@ -1,0 +1,147 @@
+/* @media only screen and (max-width:300px){
+    .container{
+        background-color:rgb(243, 231, 231);
+        width: 100vw;
+        position: absolute;
+        top:0px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        overflow: auto;
+    }
+    .container ul{
+        display: block;
+    }
+    .container input{
+        display: none;
+    }
+    .container li{
+        list-style: none;
+        padding: 5px 8px;
+        font-family: 'Chakra Petch', sans-serif;
+        font-size: 18px;
+        display: block;
+        text-align: center;
+    }
+}
+@media only screen and (min-width:560px) and (max-width:660px) {
+    .container{
+        background-color:rgb(243, 231, 231);
+        width: 100vw;
+        position: absolute;
+        top:0px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        overflow: auto;
+    }
+    .container ul{
+        display: flex;
+    }
+    .container input{
+        position: absolute;
+        right: 30px;
+        top:14px;
+        padding: 10px 10px;
+        width: 150px;
+        border-radius: 10px;
+        font-size: 15px;
+        border: none;
+    }
+    .container li{
+        list-style: none;
+        padding: 5px 8px;
+        font-family: 'Chakra Petch', sans-serif;
+        font-size: 18px;
+    }
+}
+@media only screen and (min-width:660px) and (max-width:800px) {
+    .container{
+        background-color:rgb(243, 231, 231);
+        width: 100vw;
+        position: absolute;
+        top:0px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        overflow: auto;
+    }
+    .container ul{
+        display: flex;
+    }
+    .container input{
+        position: absolute;
+        right: 50px;
+        top:14px;
+        padding: 10px 10px;
+        width: 200px;
+        border-radius: 10px;
+        font-size: 15px;
+        border: none;
+    }
+    .container li{
+        list-style: none;
+        padding: 5px 8px;
+        font-family: 'Chakra Petch', sans-serif;
+        font-size: 18px;
+    }
+}
+@media only screen and (min-width:800px) and (max-width:1050px) {
+    .container{
+        background-color:rgb(243, 231, 231);
+        width: 100vw;
+        height: 11vh;
+        position: absolute;
+        top:0px;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+    .container ul{
+        display: flex;
+    }
+    .container input{
+        position: absolute;
+        right: 60px;
+        top:14px;
+        padding: 15px 15px;
+        width: 250px;
+        border-radius: 10px;
+        font-size: 18px;
+        border: none;
+    }
+    .container li{
+        list-style: none;
+        padding: 8px 10px;
+        font-family: 'Chakra Petch', sans-serif;
+        font-size: 22px;
+    }
+}
+@media only screen and (min-width:1050px) {
+    .container{
+        background-color:rgb(243, 231, 231);
+        width: 100vw;
+        height: 12vh;
+        position: absolute;
+        top:0px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        overflow: auto;
+    }
+    .container ul{
+        display: flex;
+    }
+    .container input{
+        position: absolute;
+        right: 100px;
+        top:23px;
+        padding: 23px 23px;
+        width: 250px;
+        border-radius: 10px;
+        font-size: 18px;
+        border: none;
+    }
+    .container li{
+        list-style: none;
+        padding: 23px 40px;
+        font-size: 22px;
+        font-family: 'Chakra Petch', sans-serif;
+        font-size: 22px;
+    }
+} */
