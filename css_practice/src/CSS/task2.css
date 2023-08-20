@@ -1,0 +1,36 @@
+label{
+    display: block;
+    font-size: 30px;
+}
+input[type="text"]
+{
+    width: 200px;
+    height: 40px;
+}
+input[type="submit"]{
+    width: 150px;
+    height: 60px;
+    font-size: 24px;
+}
+img{
+    width:200px;
+    height: 200px;
+    border-radius: 100px;
+}
+.container{
+    /* display: flex;
+    flex-direction: column; */
+    /* justify-content: center;
+    align-items: center; */
+    position: relative;
+    top:100px;
+    align-self: center;
+    justify-self: center;
+    margin: 23px auto;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
