@@ -1,0 +1,26 @@
+.container{
+    height: 125px;
+    width: 100vw;
+    background-color: aquamarine;
+}
+.img1{
+    height: 60px;
+    width: 60px;
+    margin-left: 35px;
+    margin-right: 20px;
+    position: relative;
+    margin-bottom: 25px;
+}
+.img{
+    width: 100px;
+    height: 100px;
+    padding: 9px 23px;
+    /* margin-left: px; */
+    /* border: 2px solid black */
+}
+.h1{
+    display: inline-block;
+    position: relative;
+    top:-40px;
+    font-size: 45px;
+}

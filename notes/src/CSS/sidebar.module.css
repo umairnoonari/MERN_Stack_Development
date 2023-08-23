@@ -1,0 +1,21 @@
+.bar{
+    width: 130px;
+    height: 100vh;
+    background-color: aquamarine;
+}
+.container{
+    position: fixed;
+    top: 126;
+    left: 0;
+    height: 100vh;
+    width: 350px;
+    background-color: aquamarine;
+}
+.container1{
+    position: fixed;
+    top: 126;
+    left: 0;
+    height: 100vh;
+    width: 100px;
+    background-color: aquamarine;
+}
