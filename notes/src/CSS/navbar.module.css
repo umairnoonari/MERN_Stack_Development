@@ -10,6 +10,7 @@
     margin-right: 20px;
     position: relative;
     margin-bottom: 25px;
+    cursor: pointer;
 }
 .img{
     width: 100px;
