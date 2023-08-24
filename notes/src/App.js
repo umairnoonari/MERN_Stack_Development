@@ -3,9 +3,11 @@ import Login from './Components/Login'
 import Signup from './Components/Signup'
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
 import Home from './Components/Home'
+import Notestate from './Context/Notestate'
 const App = () => {
   return (
     <>
+      <Notestate>
         <Router>
           <Routes>
             <Route index path='/' element={<Login/>}></Route>
@@ -13,6 +15,7 @@ const App = () => {
             <Route path='/signup' element={<Signup/>}></Route>
           </Routes>
         </Router>
+      </Notestate>
     </>
   )
 }
