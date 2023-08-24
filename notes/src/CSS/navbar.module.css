@@ -2,6 +2,8 @@
     height: 125px;
     width: 100vw;
     background-color: aquamarine;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 .img1{
     height: 60px;
