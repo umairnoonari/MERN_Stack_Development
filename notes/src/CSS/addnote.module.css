@@ -84,6 +84,7 @@ div input{
     text-align: center;
     box-sizing: border-box;
     border: none;
+    cursor: pointer;
 }
 .ic_4{
     font-size: 40px;
@@ -100,21 +101,56 @@ div input{
     padding: 23px 23px;
     margin: 60px 34px;
     border-radius: 18px;
-    background-color: rgb(241, 198, 118)
+    background-color: rgb(241, 198, 118);
+
 }
 .header{
     font-size: 30px;
+    margin-top: 23px;
+    margin-left: 23px;
+    margin-bottom: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
 }
 .des{
     font-size: 24px;
     box-sizing: border-box;
     padding: 23px;
+    border-top: 2px solid black;
 }
 .col{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap:0.5rem;
     margin-top: 35px;
+}
+.btnClose{
+    height: 60px;
+    width: 60px;
+    float: right;
+    background-color: red;
+    font-size: 40px;
+    border: none;
+    cursor: pointer;
+    padding-top: 10px;
+    border-radius: 15px;
+    padding-left: -1px;
+    position: relative;
+    top:-74px;
+    right: 0px;
+}
+.btnUpdate{
+    height: 60px;
+    width: 60px;
+    float: right;
+    background-color: rgb(255, 218, 7);
+    font-size: 40px;
+    border: none;
+    cursor: pointer;
+    padding-top: 10px;
+    border-radius: 15px;
+    padding-left: -1px;
+    position: relative;
+    top:-74px;
+    right: 10px;
+
 }
