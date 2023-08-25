@@ -14,6 +14,8 @@ body{
     padding: 23px 23px;
     border-radius: 10px;
     margin-top: 70px;
+    margin-right: 70px;
+    border: 2px solid black;
     /* border: none; */
 }
 .btn{
@@ -24,6 +26,7 @@ body{
     border-radius: 15px;
     background-color: #44bcd8;
     font-weight: bold;
+    margin-left: 70px;
 }
 .img{
     
@@ -57,6 +60,7 @@ label{
     display: block;
     margin-top: 70px;
     font-size: 30px;
+    margin-left: 70px;
 }
 .a{
     cursor: pointer;

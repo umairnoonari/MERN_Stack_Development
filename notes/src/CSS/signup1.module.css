@@ -15,6 +15,8 @@ body{
     padding: 23px 23px;
     border-radius: 10px;
     margin-top: 30px;
+    border: 2px solid black;
+    margin-right: 70px;
     /* border: none; */
 }
 .btn{
@@ -25,6 +27,7 @@ body{
     border-radius: 15px;
     background-color: #44bcd8;
     font-weight: bold;
+    margin-left: 70px;
 }
 .img1{   
     border-top-left-radius:30px;
