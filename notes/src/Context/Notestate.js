@@ -5,6 +5,7 @@ const Notestate=(props)=>{
   const showSidebar=()=>{
      setSidebar(!sidebar)
   }
+  
     return<>
         <context.Provider value={{showSidebar,sidebar,setSidebar}}>
             {props.children}
