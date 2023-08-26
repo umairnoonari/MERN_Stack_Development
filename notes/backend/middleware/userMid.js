@@ -6,9 +6,10 @@ const authenticate=async(req,res,next)=>{
         return res.status(401).send("Unauthorized")
     }
     try {
-        const user=jwt.verify(token,"MYSECRET");
-        if(user)
+        const id=jwt.verify(token,"MYSECRET");
+        if(id)
         {
+            req.id=id.id
             next()
         }
         else
@@ -16,6 +17,7 @@ const authenticate=async(req,res,next)=>{
             return res.status(401).send("Unauthorized")
         }
     } catch (error) {
+        console.log("Hello")
         return res.status(401).send("Internal Server Error")
     }
 }

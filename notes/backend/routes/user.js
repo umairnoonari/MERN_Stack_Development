@@ -29,18 +29,19 @@ router.post('/login',async(req,res)=>{
     const user=await User.findOne({username})
     if(!user)
     {
-        return res.status(401).send("Please try correct credentials")
+        return res.send("Please try correct credentials")
     }
     try {
         const Check=await bcrypt.compare(password,user.password)
         if(Check)
         {
-            const token=jwt.sign({username},"MYSECRET",{expiresIn:30*60*60})
+
+            const token=jwt.sign({id:user.id},"MYSECRET",{expiresIn:30*60*60})
             return res.status(200).send(token)
         }
         else
         {
-            return res.status(401).send("Please try correct credentials")
+            return res.send("Please try correct credentials")
         }
         
     } catch (error) {
