@@ -15,7 +15,8 @@ router.post('/addnote',authenticate,async(req,res)=>{
     console.log(req.id)
     try {
         await Note.create({userId:req.id,title,description})
-        return res.status(200).send({msg:"Success"})
+        const notes=await Note.find({userId:req.id})
+        return res.status(200).send(notes)
     } catch (error) {
         // console.log("Hello")
         return res.status(401).send(error)

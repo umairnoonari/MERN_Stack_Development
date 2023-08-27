@@ -7,7 +7,7 @@ const NoteSlice=createSlice({
             state=action.payload
             console.log(state)
             return state
-        }
+        },
     }
 })
 export default NoteSlice.reducer
