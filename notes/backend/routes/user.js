@@ -36,7 +36,7 @@ router.post('/login',async(req,res)=>{
         if(Check)
         {
 
-            const token=jwt.sign({id:user.id},"MYSECRET",{expiresIn:30*60*60})
+            const token=jwt.sign({id:user.id},process.env.SECRET_KEY,{expiresIn:30*60*60})
             return res.status(200).send({token:token,username:user.username})
         }
         else

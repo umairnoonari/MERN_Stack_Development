@@ -1,5 +1,6 @@
 const mongoose=require("mongoose")
-const dbURL="mongodb+srv://umairnoonari98:0011Umair$@cluster0.rmezzwc.mongodb.net/notebook?retryWrites=true&w=majority"
+console.log(process.env.SECRET_KEY)
+const dbURL=process.env.DB
 const dbConnect=async()=>{
     try{
         const conn=await mongoose.connect(dbURL)

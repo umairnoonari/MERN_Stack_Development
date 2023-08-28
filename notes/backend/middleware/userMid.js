@@ -6,7 +6,7 @@ const authenticate=async(req,res,next)=>{
         return res.status(401).send("Unauthorized")
     }
     try {
-        const id=jwt.verify(token,"MYSECRET");
+        const id=jwt.verify(token,process.env.SECRET_KEY);
         if(id)
         {
             req.id=id.id
