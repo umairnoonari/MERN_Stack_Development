@@ -95,10 +95,13 @@
     padding-bottom: 2px;
     left: -3px;
     top:14px;
+    background-color: aquamarine;
+    border: none;
 }
 .ic_2{
     padding-right: 20px;
     margin-top: 18px;
     height: 44px;
     width: 50px;   
+
 }

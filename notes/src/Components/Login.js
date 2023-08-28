@@ -6,8 +6,11 @@ import {Link,useNavigate} from 'react-router-dom'
 import { useFormik } from 'formik'
 import axios from 'axios'
 import { useState } from 'react'
+import { showUser } from '../Store/slices/UserSlice'
+import { useDispatch } from 'react-redux'
 const Login = () => {
   const navigate=useNavigate();
+  const dispatch=useDispatch()
   const [error,setError]=useState('')
   const formik=useFormik({
     initialValues:{username:"",password:""},
@@ -21,7 +24,8 @@ const Login = () => {
             }
             else
             {
-                localStorage.setItem('token',res.data)
+                localStorage.setItem('token',res.data.token)
+                dispatch(showUser(res.data.username))
                 navigate('/home')
             }
         }).catch(err=>{

@@ -10,16 +10,18 @@ import Model  from "./Model";
 import MyModel from "./MyModel";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchAllNotes } from "../Store/slices/NoteSlice";
+import { fetchAllNotes} from "../Store/slices/NoteSlice";
 const AddNote = () => {
   const mystate=useSelector(state=>state.notes)
   const context = useContext(Context);
   const dispatch=useDispatch()
   const { sidebar } = context;
+  const [search1,setSearch1]=useState('')
   const [model,setModel]=useState(false)
   const [myModel,setMyModel]=useState(false);
   const Closemodel=()=>setModel(false)
   const Closemodel1=()=>setMyModel(false)
+  const [oneUser,setOneUser]=useState([])
   useEffect(()=>{
       axios.get('http://localhost:4000/notes/fetchallnotes',{headers:{
         'Content-Type':'application/json',
@@ -32,15 +34,23 @@ const AddNote = () => {
   },[])
   return (
     <div className={!sidebar ? style.container : style.container1}>
-      {/* {mystate[0].title} */}
       <div className={sidebar ? style.box1 : style.box2}>
-        <input type="text" className={style.input}></input>
+        <input type="text" name="search" className={style.input} onChange={(e)=>setSearch1(e.target.value)}></input>
         <BsSearch className={style.input1}></BsSearch>
         <button className={style.btn} onClick={()=>setModel(true)}>
           <AiOutlinePlus className={style.ic_4} /> Add Note{" "}
         </button>
         <div className={style.col}>
-        {mystate.map((itm,index)=>{ return <div key={index} className={style.box3}>
+        {mystate.length!==0?mystate.filter((itm)=>{
+          if(search1=="")
+          {
+            return itm
+          }
+          else if (itm.title.includes(search1))
+          {
+             return itm
+          }
+        }).map((itm,index)=>{ return <div key={index} className={style.box3}>
             <header className={style.header}>{itm.title.length>=15?itm.title.slice(0,15)+"...":itm.title}</header>
             <button className={style.btnClose} onClick={()=>{
               axios.delete('http://localhost:4000/notes/delete/'+itm._id,{headers:{
@@ -55,16 +65,16 @@ const AddNote = () => {
                 'Content-Type':'application/json',
                 'auth-token':localStorage.getItem('token')
               }}).then(res=>{
-                 dispatch(fetchAllNotes(res.data))
+                 setOneUser(res.data)
               })
               setMyModel(true)
             }}><MdSystemUpdateAlt/></button>
             <div className={style.des}>
               <p>{itm.description}</p>
             </div>
-        </div>})}
+        </div>}):""}
             {model&&<Model Closemodel={Closemodel}></Model>}
-            {myModel&&<MyModel Closemodel1={Closemodel1}/>}
+            {myModel&&<MyModel Closemodel1={Closemodel1} oneUser={oneUser}/>}
         </div>
       </div>
     </div>

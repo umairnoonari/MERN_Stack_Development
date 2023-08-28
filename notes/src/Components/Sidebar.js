@@ -8,8 +8,9 @@ import {MdContactPage} from 'react-icons/md'
 import {BiLogOut} from 'react-icons/bi'
 import Context from '../Context/Context'
 import { useContext } from 'react'
-
+import { useNavigate } from 'react-router-dom'
 const Sidebar = () => {
+  const navigate=useNavigate()
   const context=useContext(Context)
   const {sidebar,setSidebar}=context
   return (
@@ -22,7 +23,10 @@ const Sidebar = () => {
         </ul>
         <hr style={{border:"0.5px solid black",boxShadow:"0px 1px black"}}></hr>
         <li className={style.li_1}>
-        <BiLogOut className={style.ic_2}/><Link className={style.a}>Logout</Link></li>
+        <BiLogOut className={style.ic_2}/><button className={style.a} onClick={()=>{
+          navigate('/')
+          localStorage.removeItem('token')
+        }}>Logout</button></li>
     </div>
   )
 }

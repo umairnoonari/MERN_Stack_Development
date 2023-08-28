@@ -37,7 +37,7 @@ router.post('/login',async(req,res)=>{
         {
 
             const token=jwt.sign({id:user.id},"MYSECRET",{expiresIn:30*60*60})
-            return res.status(200).send(token)
+            return res.status(200).send({token:token,username:user.username})
         }
         else
         {
