@@ -1,5 +1,4 @@
 const mongoose=require("mongoose")
-console.log(process.env.SECRET_KEY)
 const dbURL=process.env.DB
 const dbConnect=async()=>{
     try{

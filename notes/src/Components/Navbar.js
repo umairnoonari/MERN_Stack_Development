@@ -16,7 +16,6 @@ const Navbar = () => {
           <img className={style.img} src={notebook}></img>
           <h1 className={style.h1}>Notebook</h1>
         <div className={style.logo}><p>{mystate.charAt(0).toUpperCase()}</p></div>
-        <div className={style.text}>{mystate}</div>
       </div>
       <nav >
         <Sidebar/>

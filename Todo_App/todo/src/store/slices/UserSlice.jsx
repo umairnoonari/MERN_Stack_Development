@@ -11,9 +11,6 @@ const userSlice=createSlice({
         removeUser(state,action){
             state.splice(action.payload,1)
         },
-        // clearAllUsers(state,action){
-        //     return []
-        // }
     },
     extraReducers(builder){
         builder.addCase(clearAllUsers,()=>{
