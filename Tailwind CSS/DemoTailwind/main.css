@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+.bg2{
+    @apply md:bg-purple-500 xsm:bg-yellow-200 lg:bg-black sm:bg-white
+}
+@tailwind utilities;
+@layer components{
+    .btn{
+        @apply bg-yellow-200 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full
+    }
+}
+@layer utilities{
+.bg1{
+    @apply md:bg-purple-500 xsm:bg-yellow-200 lg:bg-black mx-3
+}
+}
