@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/input.css" />
+    <title>MicrosoftClone</title>
+  </head>
+  <body>
+    <div class="container mx-auto">
+    <div class="navbar flex justify-between items-center p-4">
+      <div class="flex justify-center items-center md:order-2">
+        <div class="hamburger inline-block p-4 cursor-pointer md:hidden">
+          <div class="line h-0.5 w-6 my-1 bg-black"></div>
+          <div class="line h-0.5 w-6 my-1 bg-black"></div>
+          <div class="line h-0.5 w-6 my-1 bg-black"></div>
+        </div>
+        <div class="search md:hidden w-4 mr-6">
+            <img src="assets/search.svg" alt=""></div>
+      </div>
+      <div class="logo text-center md:order-1 flex">
+        <div class="flex justify-start">
+            <img class="w-[50%]" src="./assets/Microsofticon.png" alt="">
+        </div>
+        <div
+          class="features md:items-center md:static absolute w-fit md:w-auto md:bg-white bg-gray-200 inset-0 md:flex md:mx-4 md:space-x-6 -translate-x-96 md:translate-x-0"
+        >
+          <div class="fitem hover:underline hover:underline-offset-8 cursor-pointer">Microsoft 365</div>
+          <div class="fitem hover:underline hover:underline-offset-8 cursor-pointer">Office</div>
+          <div class="fitem hover:underline hover:underline-offset-8 cursor-pointer">Windows</div>
+          <div class="fitem hover:underline hover:underline-offset-8 cursor-pointer">Surface</div>
+          <div class="fitem hover:underline hover:underline-offset-8 cursor-pointer">Xbox</div>
+          <div class="fitem hover:underline hover:underline-offset-8 cursor-pointer">Support</div>
+        </div>
+      </div>
+      <div class="card text-center md:order-3 flex">
+        <div class="search hidden md:block mr-6 cursor-pointer">All Microsoft</div>
+        <div class="mx-3">Search</div>
+        <img class="w-4 mr-6 cursor-pointer" src="assets/search.svg" alt="">
+        <div class="flex pt-1">
+            <img class="w-4 h-4 mr-4 cursor-pointer" src="assets/cart.svg" alt="">
+            <img class="w-4 h-4 mr-4 cursor-pointer" src="assets/account.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="slider flex flex-col-reverse md:flex-row bg-[#f2f2f2] mx-2">
+      <div class="left flex flex-col justify-center items-center md:items-baseline py-12 ml-32 space-y-5">
+        <h1 class="text-2xl font-medium md:text-4xl mx-5">Surface Laptop 4</h1>
+        <p class="w-3/4 mx-5 text-center md:text-left">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+          earum minus adipisci excepturi
+        </p>
+        <button class="text-white bg-black px-4 py-2 my-6 font-bold mx-5">Shop Now</button>
+      </div>
+      <div class="right">
+        <img class="w-[60rem] md:w-[64rem] my-5 pr-5" src="./assets/Microsoftlaptop1.png" alt=""/>
+      </div>
+    </div>
+
+    <div class="promo space-y-6 flex flex-col lg:flex-row justify-center ">
+       <div class="item flex  md:flex-col items-center mx-4 space-x-2 mt-6 ">
+            <img src="assets/windowicon.png" alt="">
+            <span class="font-medium md:w-[8rem] md:text-center text-sm my-4">Choose your Microsoft 365</span>
+       </div> 
+       <div class="item flex md:flex-col items-center mx-2 space-x- ">
+        <img  src="assets/explore.PNG" alt="">
+        <span class="font-medium md:w-[8rem] md:text-center text-sm my-4">Explore Surface devices</span>
+       </div>
+       <div class="item flex  md:flex-col  items-center mx-4 space-x-2 ">
+        <img src="assets/xbox-logo-transformed.jpg" alt="">
+        <span class="font-medium md:w-[8rem] md:text-center text-sm my-4">Buy xbox games</span>
+       </div>
+       <div class="item flex  md:flex-col  items-center mx-4 space-x-2 ">
+        <img src="assets/windowicon.png" alt="">
+        <span class="font-medium md:w-[8rem] md:text-center text-sm my-4">Get Windows 11</span>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
