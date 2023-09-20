@@ -1,8 +1,10 @@
 const User=require("../models/user")
 const asyncHandler=require('express-async-handler')
 const jwt=require("jsonwebtoken")
+const bcrypt=require("bcryptjs")
 const registerUser=asyncHandler(async(req,res)=>{
     const {name,email,password,pic}=req.body
+    console.log(name)
     if(!name || !email || !password)
     {
         res.status(400)
@@ -38,7 +40,6 @@ const registerUser=asyncHandler(async(req,res)=>{
 })
 const authUser=asyncHandler(async(req,res)=>{
     const {email,password}=req.body
-
     const user=await User.findOne({email})
     if(user)
     {
