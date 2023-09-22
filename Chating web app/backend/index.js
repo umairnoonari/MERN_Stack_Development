@@ -9,6 +9,7 @@ connectDb()
 app.use(cors())
 app.use(express.json())
 app.use("/api/user",require('./Routes/userroutes'))
+app.use('/api/chat',require("./Routes/chatRoutes"))
 app.use(notFound)
 app.use(errorHandler)
 const PORT=process.env.PORT||3001
