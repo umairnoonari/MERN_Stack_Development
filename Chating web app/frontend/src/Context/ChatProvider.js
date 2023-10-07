@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 const ChatContext=createContext()
 const ChatProvider=(props)=>{
     const [user,setUser]=useState()
+    const [selectedChat,setSelectedChat]=useState()
     const navigate=useNavigate()
     useEffect(()=>{
         const userInfo=JSON.parse(localStorage.getItem('userinfo'))
@@ -14,7 +15,7 @@ const ChatProvider=(props)=>{
         else
             setUser(userInfo.data)
     },[navigate])
-    return <ChatContext.Provider value={{user,setUser}}>{props.children}</ChatContext.Provider>
+    return <ChatContext.Provider value={{user,setUser,selectedChat,setSelectedChat}}>{props.children}</ChatContext.Provider>
 }
 export const ChatState=()=>{
     return useContext(ChatContext)

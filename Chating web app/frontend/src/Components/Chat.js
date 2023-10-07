@@ -8,6 +8,7 @@ const Chat = () => {
   return (
     <div style={{width:"100%"}}>
       {user&& <SideDrawer/>}
+      {console.log(user)}
       <Box style={{display:"flex",justifyContent:"space-between"}}
       w="100%"
       h="91.5vh"
