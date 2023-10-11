@@ -64,11 +64,12 @@ const SideDrawer = () => {
           'auth-token':(user.token),
         }
       }
-
+      
       const {data}=await axios.post("http://localhost:3001/api/chat",{userId},config)
       
       if(!chats.find((c)=>c._id===data._id))
       {
+         console.log(data)
          setChats([data,...chats])
       }
       setSelectedChat(data)

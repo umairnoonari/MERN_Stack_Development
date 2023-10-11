@@ -3,7 +3,7 @@ import { Avatar, Box,Text } from '@chakra-ui/react'
 
 const UserListItem = (props) => {
     const {user,handleFunction}=props
-    console.log(props.user)
+    // console.log(props.user)
     return (
         <Box
         onClick={handleFunction}
