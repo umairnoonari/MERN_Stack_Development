@@ -1,0 +1,15 @@
+.box1{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}s
+.box2{
+    display:none;
+}
+@media (min-width:992px) and (max-width:1200px) {
+    .box3{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}

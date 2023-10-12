@@ -27,7 +27,6 @@ const Signup = () => {
       })
       return;
     }
-    console.log(pic)
     if(pic.type==="image/jpeg"||pic.type==="image/png")
     {
       const data=new FormData()
@@ -39,10 +38,8 @@ const Signup = () => {
         body:data
       }).then(res=>res.json()).then(data=>{
         setPic(data.url.toString())
-        console.log(data.url.toString())
         setLoading(false)
       }).catch(error=>{
-        console.log(error)
         setLoading(false)
       })
     }
@@ -85,7 +82,6 @@ const Signup = () => {
         const data=await axios.post("http://localhost:3001/api/user",{name,email,password,pic},{headers:{
           "Content-type":"application/json"
         }})
-        // console.log(data)
         toast({
           title: 'Registration Successful',
           status: 'success',

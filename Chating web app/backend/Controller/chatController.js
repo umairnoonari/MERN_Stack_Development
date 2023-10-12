@@ -3,7 +3,6 @@ const Chat=require('../models/chat')
 const User=require("../models/user")
  const accessChat=asyncHandler(async(req,res)=>{
     const {userId}=req.body
-    console.log(req.body)
     if(!userId)
     {
         console.log("UserId param not send with request")
@@ -46,7 +45,7 @@ const User=require("../models/user")
     }
  })
  const fetchChats=asyncHandler(async(req,res)=>{
-    console.log(req.body)
+
     try {
         Chat.find({users:{$elemMatch:{$eq:req.user._id}}})
         .populate("users","-password")
@@ -75,7 +74,7 @@ const User=require("../models/user")
     {
         return res.status(400).send("More than 2 users are required to form a group chat")
     }
-    users.push(res.user)
+    users.push(req.user)
 
     try {
         const groupChat=await Chat.create({

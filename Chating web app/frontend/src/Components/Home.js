@@ -12,7 +12,7 @@ const Home = () => {
         {
             navigate('/')
         }
-    },[])
+    },[navigate])
   return (
     <Container maxW="xl" centerContent>
        <Box

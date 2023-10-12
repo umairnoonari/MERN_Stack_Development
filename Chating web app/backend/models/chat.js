@@ -1,7 +1,7 @@
 const mongoose=require("mongoose")
 const {Schema}=mongoose
 const ChatSchema=new Schema({
-    chatname:{
+    chatName:{
         type:String,
         trim:true
     },

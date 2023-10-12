@@ -12,7 +12,6 @@ const MyChat = () => {
   const toast=useToast()
 
   const fetchChats=async()=>{
-    console.log(user.token)
     try {
       const config={
         headers:{
@@ -20,7 +19,6 @@ const MyChat = () => {
         }
       }
       const {data}=await axios.get('http://localhost:3001/api/chat/',config)
-      console.log(data)
       setChats(data)
     } catch (error) {
       toast({
@@ -49,7 +47,6 @@ const MyChat = () => {
     borderRadius="lg"
     borderWidth="1px"
     >
-      {console.log(selectedChat)}
       <Box
         pb={3}
         px={3}

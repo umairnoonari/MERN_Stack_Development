@@ -8,7 +8,6 @@ const ChatProvider=(props)=>{
     const navigate=useNavigate()
     useEffect(()=>{
         const userInfo=JSON.parse(localStorage.getItem('userinfo'))
-        console.log(localStorage.getItem('userinfo'))
         if(userInfo===null)
         {
             navigate('/')
