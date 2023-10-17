@@ -6,7 +6,7 @@ import { AddIcon } from "@chakra-ui/icons"
 import ChatLoading from "./ChatLoading"
 import { getSender } from "../Config/ChatLogics"
 import GroupChatModal from './miscellaneous/GroupChatModal'
-const MyChat = () => {
+const MyChat = ({fetchAgain}) => {
   const [loggedUser,setLoggedUser]=useState()
   const {selectedChat,setSelectedChat,user,chats,setChats}=ChatState()
   const toast=useToast()
@@ -35,7 +35,7 @@ const MyChat = () => {
   useEffect(()=>{
     setLoggedUser(JSON.parse(localStorage.getItem("userinfo")))
     fetchChats()
-  },[])
+  },[fetchAgain])
   return (
     <Box
     d={{base:selectedChat?"none":"flex",md:"flex"}}
